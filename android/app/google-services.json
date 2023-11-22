@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "323436369087",
+    "project_id": "aquaflow-1",
+    "storage_bucket": "aquaflow-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323436369087:android:1428484441a94680ede20a",
+        "android_client_info": {
+          "package_name": "com.aquaflow.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7ynjvImRd-Y4-0FyL-gAbjc9Kkim60Gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
