@@ -42,13 +42,13 @@ class _ConnectionScreenState extends State<ConnectionScreen> {
                   ),
                 ),
               ),
-              CustomTextFormField(
-                controller: litresController,
-                hintText: 'Litres',
-                borderDecoration: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-              ),
+              // CustomTextFormField(
+              //   controller: litresController,
+              //   hintText: 'Litres',
+              //   borderDecoration: OutlineInputBorder(
+              //     borderSide: BorderSide(color: Colors.grey),
+              //   ),
+              // ),
               SizedBox(height: 16.0),
               CustomTextFormField(
                 controller: locationController,
@@ -58,44 +58,44 @@ class _ConnectionScreenState extends State<ConnectionScreen> {
                 ),
               ),
               SizedBox(height: 16.0),
-              ElevatedButton(
-                onPressed: () {
-                  calculatePrice();
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blueGrey,
-                  onPrimary: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
-                ),
-                child: Text('Calculate Price', style: TextStyle(fontSize: 16.0)),
-              ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     calculatePrice();
+              //   },
+              //   style: ElevatedButton.styleFrom(
+              //     primary: Colors.blueGrey,
+              //     onPrimary: Colors.white,
+              //     padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
+              //   ),
+              //   child: Text('Calculate Price', style: TextStyle(fontSize: 16.0)),
+              // ),
               SizedBox(height: 16.0),
-              Card(
-                elevation: 4.0,
-                margin: EdgeInsets.only(bottom: 16.0),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Text(
-                    'Total Price: Ksh ${totalPrice.toStringAsFixed(2)}',
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ),
-              ),
+              // Card(
+              //   elevation: 4.0,
+              //   margin: EdgeInsets.only(bottom: 16.0),
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(16.0),
+              //     child: Text(
+              //       'Total Price: Ksh ${totalPrice.toStringAsFixed(2)}',
+              //       style: TextStyle(
+              //         fontSize: 18.0,
+              //         fontWeight: FontWeight.bold,
+              //         color: Colors.grey,
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(height: 16.0),
               ElevatedButton(
                 onPressed: () {
                   submitOrder(user?.id, user?.fullName);
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.deepOrangeAccent.shade100,
+                  primary: Colors.green.shade400,
                   onPrimary: Colors.white,
                   padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
                 ),
-                child: Text('Submit Order', style: TextStyle(fontSize: 16.0)),
+                child: Text('Ask for a connection ?', style: TextStyle(fontSize: 16.0)),
               ),
             ],
           ),
@@ -116,7 +116,7 @@ class _ConnectionScreenState extends State<ConnectionScreen> {
       String connectionName = generateConnectionName(fullName);
       int itemNumber = 1;
       String location = locationController.text;
-      double amount = (double.tryParse(litresController.text)! * 25) ?? 0.0;
+      double amount = 0;//(double.tryParse(litresController.text)! * 25) ?? 0.0;
 
       Connection newConnection = Connection(
         id: '',

@@ -48,13 +48,13 @@ class LoginScreen extends StatelessWidget {
           int roleId = userQuery.docs.first.data()['role'];
           switch (roleId) {
             case 1: // NGO
-              Navigator.of(context).popAndPushNamed(
+              Navigator.of(context).pushNamed(
                 AppRoutes.companyScreen,
                 arguments: user, // Pass the user object as an argument
               );
               break;
             case 2: // Donor
-              Navigator.of(context).popAndPushNamed(
+              Navigator.of(context).pushNamed(
                 AppRoutes.homeScreen,
                 arguments: user, // Pass the user object as an argument
               );

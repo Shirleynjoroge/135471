@@ -40,52 +40,204 @@ class HomeScreen extends StatelessWidget {
           child:Container(
             width: double.maxFinite,
             padding: EdgeInsets.only(
-              left: 30.h,
-              top: 79.v,
-              right: 30.h,
+              left: 10.h,
+              top: 5.v,
+              right: 10.h,
             ),
             child:Container(
               width: double.maxFinite,
               padding: EdgeInsets.only(
-                left: 30.h,
-                top: 79.v,
-                right: 30.h,
+                left: 20.h,
+                top: 50.v,
+                right: 20.h,
               ),
               child: Column(
                 children: [
                   GestureDetector(
                     onTap: () {
-                      // Navigate to the connection details page
                       Navigator.of(context).pushNamed(
                         AppRoutes.connectionScreen,
-                        arguments: user, // Pass the user object as an argument
+                        arguments: user,
                       );
                     },
-                    child: _buildConnection(context),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                        color: Colors.blue.shade100, // Change color here
+                      ),
+                      padding: EdgeInsets.all(24),
+                      child: Row(
+                        children: [
+                          Icon(Icons.handshake, color: Colors.black, size: 24),
+                          SizedBox(width: 12),
+                          Text(
+                            "Connection Details", // Update with your desired text
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                  SizedBox(height: 13.v),
+                  SizedBox(height: 20.v),
                   GestureDetector(
                     onTap: () {
-                      // Navigate to the consumption page
+                      Navigator.of(context).pushNamed(
+                        AppRoutes.pendingRequestsScreen,
+                        arguments: user,
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                        color: Colors.blueGrey.shade100, // Change color here
+                      ),
+                      padding: EdgeInsets.all(24),
+                      child: Row(
+                        children: [
+                          Icon(Icons.timelapse_sharp, color: Colors.black, size: 24),
+                          SizedBox(width: 12),
+                          Text(
+                            "Pending Requests", // Update with your desired text
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20.v),
+                  GestureDetector(
+                    onTap: () {
                       Navigator.of(context).pushNamed(
                         AppRoutes.consumptionScreen,
                         arguments: user,
                       );
                     },
-                    child: _buildConsumption(context),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                        color: Colors.green.shade100, // Change color here
+                      ),
+                      padding: EdgeInsets.all(24),
+                      child: Row(
+                        children: [
+                          Icon(Icons.water_drop_outlined, color: Colors.black, size: 24),
+                          SizedBox(width: 12),
+                          Text(
+                            "Consumption", // Update with your desired text
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                  SizedBox(height: 13.v),
+                  SizedBox(height: 20.v),
                   GestureDetector(
                     onTap: () {
-                      // Navigate to the pending bills page
-                      Navigator.of(context).pushNamed(
+                      Navigator.of(context).popAndPushNamed(
                         AppRoutes.pendingBillsScreen,
                         arguments: user,
                       );
                     },
-                    child: _buildPendingBills(context),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                        color: Colors.red.shade100, // Change color here
+                      ),
+                      padding: EdgeInsets.all(24),
+                      child: Row(
+                        children: [
+                          Icon(Icons.pending, color: Colors.black, size: 24),
+                          SizedBox(width: 12),
+                          Text(
+                            "Pending Bills", // Update with your desired text
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                  SizedBox(height: 5.v),
+                  SizedBox(height: 20.v),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(
+                        AppRoutes.reportsScreen,
+                        arguments: user,
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                        color: Colors.purple.shade100, // Change color here
+                      ),
+                      padding: EdgeInsets.all(24),
+                      child: Row(
+                        children: [
+                          Icon(Icons.insert_chart, color: Colors.black, size: 24),
+                          SizedBox(width: 12),
+                          Text(
+                            "Reports", // Update with your desired text
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20.v),
                 ],
               ),
             ),

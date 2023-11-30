@@ -124,6 +124,9 @@ class CreateUser extends StatelessWidget {
                   CustomTextFormField(
                     controller: passwordController,
                     hintText: "Password",
+                    textInputAction: TextInputAction.done,
+                    textInputType: TextInputType.visiblePassword,
+                    obscureText: true,
                     borderDecoration: TextFormFieldStyleHelper.outlineOnPrimaryTL14,
                     validator: (value) {
                       if (value == null || value.isEmpty) {

@@ -94,7 +94,9 @@ class ConnectionCard extends StatelessWidget {
           color: Colors.lightBlue, // Set the color to blue
         ), // Replace with an appropriate water-related icon
         title: Text(connection.connectionName),
-        subtitle: Text('Amount: Ksh ${connection.amount.toStringAsFixed(2)}'),
+        //subtitle: Text('Amount: Ksh ${connection.amount.toStringAsFixed(2)}'),
+        subtitle: Text(connection.connectionStatus == 1 ? 'Pending' : ''),
+
       ),
     );
   }
