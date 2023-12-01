@@ -15,6 +15,13 @@ import 'package:aquaflow/presentation/company_screen/company_screen.dart';
 import 'package:aquaflow/presentation/consumption_screen/consumption_screen.dart';
 import 'package:aquaflow/presentation/connection_screen/connection_screen.dart';
 import 'package:aquaflow/presentation/pending_bills_screen/pending_bills_screen.dart';
+import 'package:aquaflow/presentation/all_pending_bills/all_pending_bills.dart';
+import 'package:aquaflow/presentation/requests/requests.dart';
+import 'package:aquaflow/presentation/billing_history/billing_history.dart';
+import 'package:aquaflow/presentation/requests/requests.dart';
+import 'package:aquaflow/presentation/pending_requests/pending_requests.dart';
+import 'package:aquaflow/presentation/bill_clients/bill_clients.dart';
+import 'package:aquaflow/presentation/reports/reports.dart';
 
 
 
@@ -49,6 +56,17 @@ class AppRoutes {
 
   static const String pendingBillsScreen = '/pending_bills_screen';
 
+  static const String allpendingBillsScreen = '/allpending_bills_screen';
+
+  static const String requests = '/requests';
+
+  static const String billingHistory = '/billing_history';
+
+  static const String pendingRequestsScreen = '/pending_requests';
+
+  static const String billClientsScreen = '/bill_clients';
+  static const String reportsScreen = '/reports';
+
   static Map<String, WidgetBuilder> routes = {
     splashScreen: (context) => SplashScreen(),
     loginOrSignupScreen: (context) => LoginOrSignupScreen(),
@@ -65,5 +83,11 @@ class AppRoutes {
     connectionScreen: (context) => ConnectionScreen(),
     consumptionScreen: (context) => ConsumptionScreen(),
     pendingBillsScreen: (context) => PendingBillsScreen(),
+    allpendingBillsScreen: (context) => AllPendingBillsScreen(),
+    requests: (context) => RequestsScreen(),
+    billingHistory: (context) => BillingHistory(),
+    pendingRequestsScreen: (context) => PendingRequestsScreen(),
+    billClientsScreen: (context) => BillClientsScreen(),
+    reportsScreen: (context) => ReportsScreen(),
   };
 }
